@@ -16,8 +16,6 @@ package io.librevents.dto.event.parameter;
 
 import java.math.BigInteger;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import io.librevents.dto.event.serializer.NumberParameterSerializer;
 import jakarta.persistence.Embeddable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -32,7 +30,6 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-@JsonSerialize(using = NumberParameterSerializer.class)
 public class NumberParameter extends AbstractEventParameter<BigInteger> {
 
     public NumberParameter(String type, BigInteger value) {
