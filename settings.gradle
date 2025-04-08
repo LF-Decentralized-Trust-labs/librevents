@@ -2,12 +2,13 @@ plugins {
     id("com.gradle.develocity") version("3.19.2")
 }
 
-rootProject.name = 'eventeum'
+rootProject.name = 'librevents'
 
 include 'core'
 include 'server'
 include 'privacy'
 include 'integration-tests'
+include 'new-core'
 
 develocity {
     buildScan {
